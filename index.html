@@ -3,9 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tender Application</title>
+    <title>Tender Application System</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Tender Application</h1>
+    <section id="Signup-form">
+      <img src="icons/user.png" id="user-icon" />
+      <h1>Sign Up Now</h1>
+      <form>
+        <input type="text" id="full-name" placeholder="Full name" />
+
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+        <input
+          type="password"
+          id="cfm-password"
+          placeholder="Confirm Password"
+        />
+        <button id="signup-btn" onclick="register()">Signup</button>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </form>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
