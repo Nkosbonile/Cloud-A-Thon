@@ -1,20 +1,10 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyCYOyJEDJ0cveLGq7Lou77GeUMXbc2X4nU",
-  authDomain: "tender-application-system.firebaseapp.com",
-  projectId: "tender-application-system",
-  storageBucket: "tender-application-system.appspot.com",
-  messagingSenderId: "337906950006",
-  appId: "1:337906950006:web:1a07803d30bc4e188ee457",
-  measurementId: "G-2CQGMEQBHJ",
-};
-
 const auth = firebase.auth();
 const database = firebase.database();
 const app = initializeApp(firebaseConfig);
 
- fullName = document.getElementById("full-name").value;
+fullName = document.getElementById("full-name").value;
 email = document.getElementById("email").value;
- password = document.getElementById("password").value;
+password = document.getElementById("password").value;
 const signUpBtn = document.getElementById("signup-btn");
 function register() {
   if (validateEmail(email) === false || validatePassword(password) === false) {
@@ -51,7 +41,7 @@ function register() {
 }
 function validateEmail(email) {
   //emailvalidation masteringjs website
-   expression = /^[^@]+@\w+(\.\w+)+\w$/.test(str);
+  expression = /^[^@]+@\w+(\.\w+)+\w$/.test(str);
   if (expression.test(email) === true) {
     //Email is proper
     return true;
